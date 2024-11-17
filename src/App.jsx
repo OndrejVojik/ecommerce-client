@@ -19,9 +19,10 @@ const ScrollToTop = () => {
 };
 
 function App() {
+  const basePath = import.meta.env.VITE_BASE_PATH;
   return (
     <div className="app">
-      <BrowserRouter>
+      <BrowserRouter basename={basePath}>
         <Navbar />
         <ScrollToTop />
         <Routes>
