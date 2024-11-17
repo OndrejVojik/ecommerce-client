@@ -27,7 +27,7 @@ const ItemDetails = () => {
   async function getItem() {
     try {
       const response = await fetch(
-        `https://ecommerce-server-ejp9.onrender.com/api/items?filters[documentId][$eq]=${itemId}&populate=image`,
+        `https://ecommerce-server-ejp9.onrender.com/api/items/${itemId}?populate=image`,
         {
           method: "GET",
         }

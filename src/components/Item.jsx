@@ -29,6 +29,7 @@ const Item = ({ item, width }) => {
     },
   } = item;
 
+  console.log(url)
   return (
     <Box width={width}>
       <Box
