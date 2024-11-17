@@ -69,9 +69,6 @@ const ItemDetails = () => {
   }, [itemId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const {
-    category,
-    price,
-    name,
     image: {
           formats: {
             medium: { url },
@@ -142,7 +139,7 @@ const ItemDetails = () => {
               <FavoriteBorderOutlinedIcon />
               <Typography sx={{ ml: "5px" }}>ADD TO WISHLIST</Typography>
             </Box>
-            <Typography>CATEGORIES: {category}</Typography>
+            <Typography>CATEGORIES: {item?.category}</Typography>
           </Box>
         </Box>
       </Box>
