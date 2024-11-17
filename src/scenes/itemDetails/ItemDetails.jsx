@@ -28,7 +28,7 @@ const ItemDetails = () => {
     console.log(itemId)
     try {
       const response = await fetch(
-        `https://ecommerce-server-ejp9.onrender.com/api/items/et8o4dulswoqyktqblfxjuxb?populate=image`,
+        `https://ecommerce-server-ejp9.onrender.com/api/items/${itemId}?populate=image`,
         {
           method: "GET",
         }
@@ -68,6 +68,17 @@ const ItemDetails = () => {
     getItems();
   }, [itemId]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  const {
+    category,
+    price,
+    name,
+    image: {
+          formats: {
+            medium: { url },
+        },
+    },
+  } = item;
+
   return (
     <Box width="80%" m="80px auto">
       <Box display="flex" flexWrap="wrap" columnGap="40px">
@@ -77,7 +88,7 @@ const ItemDetails = () => {
             alt={item?.name}
             width="100%"
             height="100%"
-            src={`https://ecommerce-server-ejp9.onrender.com${item?.image?.formats?.medium?.url}`}
+            src={`https://ecommerce-server-ejp9.onrender.com${url}`}
             style={{ objectFit: "contain" }}
           />
         </Box>
