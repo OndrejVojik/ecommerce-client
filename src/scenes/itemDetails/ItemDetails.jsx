@@ -28,7 +28,7 @@ const ItemDetails = () => {
     console.log(itemId)
     try {
       const response = await fetch(
-        `https://ecommerce-server-ejp9.onrender.com/api/items/${itemId}?populate=image`,
+        `https://ecommerce-server-ejp9.onrender.com/api/items/et8o4dulswoqyktqblfxjuxb?populate=image`,
         {
           method: "GET",
         }
